@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FoodHub - Order Food Online</title>
+<title>Foodie Express</title>
 
 https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap
 
@@ -16,60 +16,53 @@ https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&displa
 }
 
 body{
-    background:#f8fafc;
+    background:#f5f7fb;
 }
 
-/* Navbar */
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
+    padding:18px 8%;
     background:#fff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:1000;
 }
 
 .logo{
     font-size:28px;
     font-weight:700;
-    color:#ff5a5f;
+    color:#ff5722;
 }
 
-.nav-links{
+nav ul{
     display:flex;
+    list-style:none;
     gap:25px;
 }
 
-.nav-links a{
+nav ul li a{
     text-decoration:none;
     color:#333;
     font-weight:500;
-    transition:.3s;
 }
 
-.nav-links a:hover{
-    color:#ff5a5f;
-}
-
-.cart-btn{
-    background:#ff5a5f;
+.cart{
+    background:#ff5722;
     color:white;
-    padding:10px 18px;
+    padding:10px 20px;
     border-radius:30px;
     border:none;
     cursor:pointer;
-    font-weight:600;
 }
 
-/* Hero */
 .hero{
-    height:90vh;
+    height:80vh;
     background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=80');
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=80");
     background-size:cover;
     background-position:center;
     display:flex;
@@ -79,24 +72,22 @@ nav{
     color:white;
 }
 
-.hero-content h1{
+.hero h1{
     font-size:60px;
-    margin-bottom:15px;
 }
 
-.hero-content p{
+.hero p{
+    margin:15px 0;
     font-size:20px;
-    margin-bottom:30px;
 }
 
 .search-box{
     display:flex;
+    margin-top:20px;
     background:white;
     border-radius:50px;
     overflow:hidden;
-    width:700px;
-    max-width:95%;
-    margin:auto;
+    max-width:700px;
 }
 
 .search-box input{
@@ -104,42 +95,36 @@ nav{
     border:none;
     padding:18px;
     outline:none;
-    font-size:16px;
 }
 
 .search-box button{
-    border:none;
-    background:#ff5a5f;
+    background:#ff5722;
     color:white;
-    padding:18px 35px;
+    border:none;
+    padding:18px 25px;
     cursor:pointer;
-    font-weight:600;
 }
-
-/* Categories */
 
 .section-title{
     text-align:center;
-    margin:50px 0 30px;
+    margin:50px 0 25px;
     font-size:35px;
-    color:#222;
 }
 
 .categories{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
     gap:20px;
     padding:0 8%;
 }
 
 .category{
     background:white;
-    padding:25px;
     text-align:center;
-    border-radius:20px;
-    transition:.3s;
-    cursor:pointer;
+    padding:25px;
+    border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:.3s;
 }
 
 .category:hover{
@@ -150,24 +135,18 @@ nav{
     font-size:45px;
 }
 
-.category h3{
-    margin-top:10px;
-}
-
-/* Restaurants */
-
-.restaurant-grid{
-    padding:30px 8% 80px;
+.restaurants{
+    padding:40px 8%;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
 }
 
 .card{
     background:white;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
     transition:.3s;
 }
 
@@ -185,54 +164,40 @@ nav{
     padding:20px;
 }
 
-.card-content h3{
-    color:#222;
-}
-
 .rating{
-    color:#ff9800;
-    margin:8px 0;
-}
-
-.card-content p{
-    color:#666;
-    margin-bottom:15px;
+    color:orange;
+    margin:10px 0;
 }
 
 .order-btn{
     width:100%;
-    background:#ff5a5f;
-    color:white;
-    border:none;
     padding:12px;
+    border:none;
+    background:#ff5722;
+    color:white;
     border-radius:10px;
-    font-size:15px;
-    font-weight:600;
     cursor:pointer;
+    margin-top:10px;
+    font-size:15px;
 }
-
-.order-btn:hover{
-    background:#ff3d43;
-}
-
-/* Footer */
 
 footer{
     background:#111827;
     color:white;
     text-align:center;
     padding:25px;
+    margin-top:40px;
 }
 
 @media(max-width:768px){
 
-.hero-content h1{
+.hero h1{
     font-size:38px;
 }
 
 .search-box{
     flex-direction:column;
-    border-radius:20px;
+    border-radius:15px;
 }
 
 .search-box button{
@@ -244,126 +209,96 @@ footer{
 <body>
 
 <nav>
-    <div class="logo">🍔 FoodHub</div>
+    <div class="logo">🍔 Foodie</div>
 
-    <div class="nav-links">
-        #Home</a>
-        #Restaurants</a>
-        #Offers</a>
-        #Contact</a>
-    </div>
+    <ul>
+        <li>#Home</a></li>
+        <li>#Restaurants</a></li>
+        <li>#Offers</a></li>
+        <li>#Contact</a></li>
+    </ul>
 
-    <button class="cart-btn">
+    <button class="cart">
         Cart (<span id="cartCount">0</span>)
     </button>
 </nav>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>Order Your Favorite Food</h1>
-        <p>Fast Delivery • Best Restaurants • Amazing Offers</p>
+    <div>
+        <h1>Order Food Anytime</h1>
+        <p>Fast Delivery • Best Restaurants • Great Deals</p>
 
         <div class="search-box">
-            <input type="text" placeholder="Search restaurants, dishes...">
+            <input type="text" placeholder="Search food or restaurants">
             <button>Search</button>
         </div>
     </div>
 </section>
 
-<h2 class="section-title">Popular Categories</h2>
+<h2 class="section-title">Categories</h2>
 
 <div class="categories">
-    <div class="category">
-        <span>🍕</span>
-        <h3>Pizza</h3>
+    <div class="category"><span>🍕</span><h3>Pizza</h3></div>
+    <div class="category"><span>🍔</span><h3>Burger</h3></div>
+    <div class="category"><span>🍗</span><h3>Chicken</h3></div>
+    <div class="category"><span>🍜</span><h3>Noodles</h3></div>
+    <div class="category"><span>🍰</span><h3>Desserts</h3></div>
+</div>
+
+<h2 class="section-title">Popular Restaurants</h2>
+
+<div class="restaurants">
+
+    <div class="card">
+        https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800
+        <div class="card-content">
+            <h3>Pizza Palace</h3>
+            <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
+            <p>Italian Pizza • 30 mins</p>
+            <button class="order-btn" onclick="addCart(this)">Order Now</button>
+        </div>
     </div>
 
-    <div class="category">
-        <span>🍔</span>
-        <h3>Burger</h3>
+    <div class="card">
+        https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800
+        <div class="card-content">
+            <h3>Burger House</h3>
+            <div class="rating">⭐⭐⭐⭐⭐ 4.7</div>
+            <p>Burgers & Fries • 25 mins</p>
+            <button class="order-btn" onclick="addCart(this)">Order Now</button>
+        </div>
     </div>
 
-    <div class="category">
-        <span>🍜</span>
-        <h3>Noodles</h3>
+    <div class="card">
+        https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800
+        <div class="card-content">
+            <h3>Royal Biryani</h3>
+            <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+            <p>Hyderabadi Biryani • 35 mins</p>
+            <button class="order-btn" onclick="addCart(this)">Order Now</button>
+        </div>
     </div>
-
-    <div class="category">
-        <span>🍗</span>
-        <h3>Chicken</h3>
-    </div>
-
-    <div class="category">
-        <span>🍰</span>
-        <h3>Desserts</h3>
-    </div>
-</div>
-
-<h2 class="section-title">Top Restaurants</h2>
-
-<div class="restaurant-grid">
-
-<div class="card">
-https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80
-<div class="card-content">
-<h3>Pizza Palace</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>Italian Pizza | 30 mins</p>
-<button class="order-btn" onclick="addCart()">Order Now</button>
-</div>
-</div>
-
-<div class="card">
-https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80
-<div class="card-content">
-<h3>Burger King</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.7</div>
-<p>Burgers & Fries | 25 mins</p>
-<button class="order-btn" onclick="addCart()">Order Now</button>
-</div>
-</div>
-
-<div class="card">
-https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80
-<div class="card-content">
-<h3>Asian Bowl</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>Noodles & Rice | 20 mins</p>
-<button class="order-btn" onclick="addCart()">Order Now</button>
-</div>
-</div>
-
-<div class="card">
-https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=80
-<div class="card-content">
-<h3>Royal Biryani</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>Hyderabadi Biryani | 35 mins</p>
-<button class="order-btn" onclick="addCart()">Order Now</button>
-</div>
-</div>
 
 </div>
 
 <footer>
-    <h3>🍽 FoodHub</h3>
-    <p>Delicious Food Delivered To Your Doorstep</p>
+    <h3>Foodie Express</h3>
+    <p>Delivered Fresh & Fast 🚀</p>
 </footer>
 
 <script>
-let cart = 0;
+let count = 0;
 
-function addCart(){
-    cart++;
-    document.getElementById("cartCount").innerText = cart;
+function addCart(btn){
+    count++;
+    document.getElementById("cartCount").innerText = count;
 
-    const btn = event.target;
-    btn.innerHTML = "✓ Added";
-    btn.style.background = "#16a34a";
+    btn.innerText = "Added ✓";
+    btn.style.background = "green";
 
     setTimeout(()=>{
-        btn.innerHTML = "Order Now";
-        btn.style.background = "#ff5a5f";
+        btn.innerText = "Order Now";
+        btn.style.background = "#ff5722";
     },1500);
 }
 </script>
